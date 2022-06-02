@@ -2,15 +2,19 @@
 
 
 ## DESCRIPTION
-This project has been a long time 
-
+This project has been a long time time coming. It has taken me quite some time to wrap my head around react and javascript in it's entirety but with help from the cohort and batchmates from MIT's program. I have built a program that is a replication of a banking application that allows registration and login in f
 As part of the back end, the app uses Node.js and MongoDB for storage.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## AVAILABLE SCRIPTS
 
-The code is split into two main folders: client and server.
+## NPM INSTALL
+
+clone the product into your local machine and run npm install in the server and ui-client directories.
+
+follow with npm start
+
+
 
 ### **_For the client:_**
 
@@ -63,20 +67,7 @@ In the project directory, you can run:
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (recommended)
 - [Git](https://github.com/git-guides/install-git)
 
-### _Installation_
 
-- Once you have cloned the projec from the repo you need to into the client and server folders from yout console/command line and run
-
-#### `npm install`
-
-## MAINTAINERS
-
-This project is maintained by Miriam Bade.
-For any questions, you can reach out to me by email: yukinomiriam@gmail.com.
-
-### `Live Page`
-
-[http://miriam-bade-bankingapp.s3-website.us-east-2.amazonaws.com/#/](http://miriam-bade-bankingapp.s3-website.us-east-2.amazonaws.com/#/)
 
 ## LICENSE
 
