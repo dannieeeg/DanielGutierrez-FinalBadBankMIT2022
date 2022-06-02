@@ -6,12 +6,11 @@ const Role = db.role;
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
-// ---------------------------------- Create Account functionallity ------------------------------
+//  daniel create the functionality for the auth services 
 exports.createAccount = (req, res) => {
-  //console.log(`createAccount-email : ${req.body.email}`);
-  //generate random acct # with 9 digits
+
   const acct = Math.floor(100000 + Math.random() * 900000000);
-  //console.log("acct :" + acct);
+
   const now = new Date().toLocaleString("en-US", {
     timeZone: "America/Chicago",
   });

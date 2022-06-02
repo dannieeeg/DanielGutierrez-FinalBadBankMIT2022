@@ -1,11 +1,13 @@
 # DGUTIERREZ-MIT-FINAL
-
+my final capstone bad bank project for the MITXPRO Full Stack Development program
 
 ## DESCRIPTION
-This project has been a long time time coming. It has taken me quite some time to wrap my head around react and javascript in it's entirety but with help from the cohort and batchmates from MIT's program. I have built a program that is a replication of a banking application that allows registration and login in f
+This project has been a long time time coming. It has taken me quite some time to wrap my head around react and javascript in it's entirety but with help from the cohort and batchmates from MIT's program. I have built a program that is a replication of a banking application that allows registration and login and users with accounts to see their transaction types and dates created as well as amounts.
 As part of the back end, the app uses Node.js and MongoDB for storage.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## STRETCH GOALS 
+
+In the future I would like to add solidity and the PLAID api so users can connect to their current bank.
 
 
 ## NPM INSTALL
@@ -59,16 +61,9 @@ In the project directory, you can run:
 
 #### `node index.js`
 
-## INSTALLATION GUIDELINES
-
-### _Pre-requisites_
-
-- [Node.js](https://nodejs.org/en/download/)
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) (recommended)
-- [Git](https://github.com/git-guides/install-git)
 
 
 
 ## LICENSE
 
-[MIT License](https://github.com/yukinomiriam/mit-atm-react/blob/main/LICENSE)
+[MIT License]

@@ -6,7 +6,7 @@ exports.createTransaction = (acct, amount, tranType, userID) => {
   const now = new Date().toLocaleString("en-US", {
     timeZone: "America/Chicago",
   });
-  //generate a random
+
   const tranNumber = Math.floor(100000 + Math.random() * 900000000000);
   const trans = new Transaction({
     acct: acct,
@@ -29,7 +29,7 @@ exports.createTransaction = (acct, amount, tranType, userID) => {
 exports.getUserTrans = (req, res) => {
   let transactionsList = [];
 
-  //finds the user
+ 
   User.findById(req.params.id, function (err, user) {
     if (err) {
       next(err);
