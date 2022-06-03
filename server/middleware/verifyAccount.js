@@ -1,9 +1,13 @@
 const db = require("../model");
 const ROLES = db.ROLES;
 const User = db.user;
+//  FIND EMAIL DUPLICATES FOR THE REGISTER PAGE HERE
 
+//  CHECK THROUG THE DATABASE FOR DUPLICATE ACCOUNT INFORMATION WITHIN THE MODELS. 
+
+//  CHECK USERNAME/ EMAIL AND FOR THE ENUM ROLES. DANIEL THINK JAVA/ OBJECT ORIENTED PROGRAMMING 
 checkDuplicateUsernameOrEmail = (req, res, next) => {
-  // Email
+  
   User.findOne({
     email: req.body.email,
   }).exec((err, user) => {
@@ -13,21 +17,21 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
     }
 
     if (user) {
-      res.status(400).send({ message: "Error: Email is already in use!" });
+      res.status(400).send({ message: "This is a duplicate email. You must choose a different email address to proceed. " });
       return;
     }
 
     next();
   });
-  // });
+  
 };
-
+//  CHECK THE ROLE EXISTED, IMPLEMENT THE DJANGO BACK END IF WE CAN HRE. 
 checkRolesExisted = (req, res, next) => {
   if (req.body.roles) {
     for (let i = 0; i < req.body.roles.length; i++) {
       if (!ROLES.includes(req.body.roles[i])) {
         res.status(400).send({
-          message: `Failed! Role ${req.body.roles[i]} does not exist!`,
+          message: `THIS ROLE ${req.body.roles[i]} DOES NOT EXIST. `,
         });
         return;
       }

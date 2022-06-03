@@ -19,12 +19,12 @@ function Login(props) {
       setStatus(`Error:  ${label} is required `);
       return false;
     }
-    // validate email format
+    // VALIDATE IT IS  CORRECT EMAIL FORMAT IF NOT RETURN THE STANDARD ERROR MESSAGE 
     if (
       label === "email" &&
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(field)
     ) {
-      const errorMessage = `Error: Email has an invalid format`;
+      const errorMessage = `TRY AGAIN`;
       setStatus(errorMessage);
       return false;
     }
@@ -42,7 +42,7 @@ function Login(props) {
         window.location.reload();
       })
       .catch(() => {
-        setStatus(`Error:  There was an error trying to login. `);
+        setStatus(`ERROR TRY AGAIN `);
       });
 
     if (isLoggedIn) {
@@ -53,7 +53,7 @@ function Login(props) {
   useEffect(() => {
     let isMounted = true;
     if (status !== "") {
-      //console.log(`Called useEffect Login`);
+    
       setTimeout(() => {
         if (isMounted) setStatus("");
       }, 3000);

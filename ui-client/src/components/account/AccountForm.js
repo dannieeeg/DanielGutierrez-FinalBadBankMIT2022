@@ -4,6 +4,19 @@ import { getYear, getMonth } from "date-fns";
 import range from "lodash/range";
 
 import "react-datepicker/dist/react-datepicker.css";
+//  DANIEL REFACTOR FOR THE BIRTHDAY CHOSEN 
+
+
+
+//  DANIEL REFACTOR FOR THE AGE 16  FOR FUTURE STRETCH GOAL 
+
+
+//  DANIEL LOOK AT STACK OVERFLOW FOR THE FORM BUILD HERE 
+
+
+//  DANIEL THINK ABOUT FORMIK FORM BUILDS WITH PYTHON HERE
+
+
 
 function AccountForm(props) {
   const years = range(1930, getYear(new Date()) + 1, 1);
@@ -23,6 +36,7 @@ function AccountForm(props) {
   ];
   return (
     <>
+    {/*  CREATE A NEW HANDLER FOR THE NAME CHANGES  */}
       {props.isNewAccount && (
         <>
           First Name: <br />
@@ -110,6 +124,7 @@ function AccountForm(props) {
           <br />
         </>
       )}
+      {/*  INCREASE THE INPUT SEGMENTS FOR THE FORM CONTROL  */}
       Email Address: <br />
       <input
         type="input"

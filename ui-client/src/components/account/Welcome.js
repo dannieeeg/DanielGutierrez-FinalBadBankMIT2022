@@ -80,7 +80,7 @@ const Welcome = () => {
             error.message ||
             error.toString();
           console.error("error: " + resMessage);
-          //setStatus(resMessage);
+          
           if (error.response && error.response.status === 401) {
             EventBus.dispatch("logout");
           }
@@ -148,13 +148,15 @@ const Welcome = () => {
                   </h6>
                 </div>
                 <div className="row">
+
+                  
                   <MDBDataTableV5
                     hover
                     striped
                     searchTop
                     searchBottom={false}
-                    entriesOptions={[5, 10, 15]} //drop down for num records per page
-                    entries={5} //entries per page
+                    entriesOptions={[5, 10, 15]} 
+                    entries={5} 
                     sorting={false}
                     pagesAmount={5}
                     paginationLabel={["Previous", "Next"]}

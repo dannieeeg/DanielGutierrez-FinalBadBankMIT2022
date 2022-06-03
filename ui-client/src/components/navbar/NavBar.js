@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// used for log out if token is expired
+// DANIEL MAKE SURE TO LOG OUT THE CURRENT USER WHEN THE TOKEN EXPIRES SET FOR 15 MINUTES 
 import EventBus from "../../common/EventBus";
 
 function NavBar(props) {

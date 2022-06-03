@@ -17,7 +17,7 @@ import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
 import { useDispatch } from "react-redux";
 import { logout } from "./actions/auth";
-// used for log out if token is expired
+
 import AuthVerify from "./common/AuthVerify";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     history.listen((location) => {
-      dispatch(clearMessage()); // clear message when changing location
+      dispatch(clearMessage()); 
     });
   }, [dispatch]);
 

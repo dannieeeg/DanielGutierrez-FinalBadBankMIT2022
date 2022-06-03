@@ -3,17 +3,22 @@ const cors = require("cors");
 const dbConfig = require("../server/config/db.config");
 
 const app = express();
+//  ORIGIN OF THE LOCAL HOST
 
+
+//  CORSOPTIONS MAKE NOTE OF IT FOR THE LOCAL MACHINE MAKE SURE TO CREATE IT PROPERLY
 var corsOptions = {
   origin: "http://localhost:3000",
 };
 
 app.use(cors(corsOptions));
 
-// parse requests of content-type - application/json
+//  FOLLOW UDEMY COURSE 
+
+
 app.use(express.json());
 
-// parse requests of content-type - application/x-www-form-urlencoded
+
 app.use(express.urlencoded({ extended: true }));
 
 const db = require("../server/model");
@@ -33,12 +38,11 @@ db.mongoose
     process.exit();
   });
 
-// simple route
+
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Bad Bank application." });
+  res.json({ message: "WELCOME TO BANK SAFELY WITH DANIEL GUTIERREZ." });
 });
 
-// routes
 require("../server/routes/auth.routes")(app);
 require("../server/routes/user.routes")(app);
 
@@ -57,7 +61,7 @@ function initial() {
         if (err) {
           console.log("error", err);
         }
-
+//  ADMIN ROLE  OR USR ROLE 
         console.log("added 'user' to roles collection");
       });
 

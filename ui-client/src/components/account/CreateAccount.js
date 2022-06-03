@@ -21,23 +21,22 @@ function CreateAccount() {
       setStatus(errorMessage);
       return false;
     }
-    // validate email format
+    // DANIEL THINK VALID EMAIL FORMAT HERE  - NEED VALIDATION HERE 
     if (
       label === "Email" &&
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(field)
     ) {
-      errorMessage = `Error: Email has an invalid format`;
+      errorMessage = `EMAIL IS INCORRECT, TRY AGAIN`;
       setStatus(errorMessage);
       return false;
     }
     // validate password
     if (label === "Password" && field.length < 8) {
-      errorMessage = `Error: Password should have at least 8 characters`;
+      errorMessage = `Password should have at least 8 characters`;
       setStatus(errorMessage);
       return false;
     }
-    //console.log(`field: ${field}`);
-    //console.log(`label: ${label}`);
+   
     setStatus("");
     return true;
   }
@@ -45,7 +44,7 @@ function CreateAccount() {
   useEffect(() => {
     let isMounted = true;
     if (status !== "") {
-      //console.log(`Called useEffect Create Account`);
+      
       setTimeout(() => {
         if (isMounted) setStatus("");
       }, 3000);
@@ -55,7 +54,7 @@ function CreateAccount() {
   }, [status]);
 
   function handleCreate() {
-    //console.log(firstName, email, password);
+ 
     if (!validate(firstName, "First Name")) return;
     if (!validate(lastName, "Last Name")) return;
     if (!validate(email, "Email")) return;
@@ -110,7 +109,7 @@ function CreateAccount() {
       setIsDisabled(false);
     }
     setLastName(e.currentTarget.value);
-    //console.log("N: " + e.currentTarget.value);
+    
     if (
       firstName === "" &&
       e.currentTarget.value === "" &&

@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+//  ROLE SCHEMA HERE DANIEL FOR THE USER - ADMIN ROLES 
+
+
 
 const Role = mongoose.model(
   "Role",

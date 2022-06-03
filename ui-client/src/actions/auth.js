@@ -1,6 +1,4 @@
-/**
- * This is creator for actions related to authentication. We’re gonna import AuthService to make asynchronous HTTP requests with trigger one or more dispatch in the result.
- */
+
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -12,6 +10,11 @@ import {
 
 import AuthService from "../services/auth.service";
 
+
+//  AUTHENTICATION SERVICE FOR THE REGISTER PAGE AND MAKE SURE TO RELAY THE MESSAGE AND PAYLOAD OVER 
+
+
+//  REGISTER SUCCESS  OR FAIL 
 export const register = (username, email, password) => (dispatch) => {
   return AuthService.register(username, email, password).then(
     (response) => {
@@ -47,6 +50,14 @@ export const register = (username, email, password) => (dispatch) => {
     }
   );
 };
+//  LOGIN AUTHENTICATION SUCCESS OR FAIL FOR DATA  DISPATCH 
+
+
+//  DANIEL REFACTOR TO TAKE OUT THE FULL NAME FOR LOGIN  DISPATCH HERE BECAUSE YOU ALREADY TOOK IT OUT OF THE ALREADY COMPONENTS
+
+
+//  DANIEL REFACTOR TO USE PAY LOAD 
+
 
 export const login = (username, password) => (dispatch) => {
   return AuthService.login(username, password).then(
@@ -80,6 +91,12 @@ export const login = (username, password) => (dispatch) => {
   );
 };
 
+
+
+//  LOGOUT FUNCTION
+
+
+//  HAVE USER LOGOUT DISPATCH  AND RETURN TO THE ORIGINAL WELCOME URL 
 export const logout = () => (dispatch) => {
   AuthService.logout();
 

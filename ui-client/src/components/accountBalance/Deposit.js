@@ -33,7 +33,7 @@ function Deposit() {
             error.message ||
             error.toString();
           console.log("error: " + resMessage);
-          //setStatus(resMessage);
+   
           if (error.response && error.response.status === 401) {
             EventBus.dispatch("logout");
           }
@@ -44,15 +44,15 @@ function Deposit() {
 
   const validateDeposit = (event) => {
     let amt = event.target.value;
-    //console.log("event: " + amt);
+   
     if (amt !== "" && (Number(amt) <= 0 || amt === "-")) {
-      setStatus("Error: Invalid amount");
+      setStatus("INCORRECT AMOUNT");
       setIsSuccess(false);
       return setValidTransaction(false);
     }
 
     if (amt !== "" && amt !== "-" && !Number(amt)) {
-      setStatus("Error: Please introduce numbers only");
+      setStatus("INCORRECT INPUT");
       setIsSuccess(false);
       return setValidTransaction(false);
     }
@@ -66,10 +66,10 @@ function Deposit() {
   };
 
   useEffect(() => {
-    //console.log(`Called useEffect Deposit`);
+
     let isMounted = true;
     if (status !== "") {
-      //console.log(`Called useEffect`);
+     
       setTimeout(() => {
         if (isMounted) setStatus("");
       }, 3000);

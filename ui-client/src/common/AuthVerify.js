@@ -1,6 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+
+//  GO THROUGH ACCESS 
 const parseJwt = (token) => {
   try {
     return JSON.parse(atob(token.split(".")[1]));

@@ -94,8 +94,8 @@ function AllData() {
                   striped
                   searchTop
                   searchBottom={false}
-                  entriesOptions={[5, 10, 15]} //drop down for num records per page
-                  entries={5} //entries per page
+                  entriesOptions={[5, 10, 15]} 
+                  entries={5} 
                   sorting={false}
                   pagesAmount={5}
                   paginationLabel={["Previous", "Next"]}

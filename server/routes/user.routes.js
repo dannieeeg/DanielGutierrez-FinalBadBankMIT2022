@@ -11,16 +11,22 @@ module.exports = function (app) {
     next();
   });
 
-  //find user by ID
+  // GO THROUGHT THE USERS TO FIND THE SPECIFIC ID 
+
+  //  SERVER CONNECTION 
   app.get("/api/user/:id", [authJwt.verifyToken], controller.getById);
 
-  //get user balance by id
+  //RETRIEVE THE BALANCE FOR THE USER ID 
+
+
   app.get(
     "/api/user/balance/:id",
     [authJwt.verifyToken],
     controller.getUserBalanceById
   );
-  //update account's balance by id
+  // DO NOT DELETE 
+
+  //  THIS IS WHERE THE CURRENT ID THATS LOGGED IN AND THE USER INFORMATION WILL BE ABLE TO UPDATE
   /**
    * @param : id - user ID
    */
@@ -29,6 +35,12 @@ module.exports = function (app) {
     [authJwt.verifyToken],
     controller.updateUserBalanceById
   );
+//  KEEP ALL THE TRANSACTIONS FOR THE ID PARAMETER HERE
+
+
+
+//  MAKE SURE TO KEEP THE AUTHTOKENS HERE FOR THE USER NOT TO KEEP GETTING LOGGED OUT DANIEL 
+
 
   app.get(
     "/api/user/transactions/:id",
@@ -36,7 +48,7 @@ module.exports = function (app) {
     transController.getUserTrans
   );
 
-  //get all the accounts
+ 
   app.get(
     "/api/user/all/:id",
     [authJwt.verifyToken, authJwt.isAdmin],

@@ -11,6 +11,13 @@ import {
   GET_ALL_FAIL,
 } from "./type";
 
+
+//  END IMPORTS 
+
+
+//  GET USER BALANCE FOR ID FUNCTION WITH SUCCESS AND IF ERROR RESPOND WITH A SPECIFIC MEESSAGE
+
+
 export const getUserBalance = (userID) => (dispatch) => {
   return UserService.getUserBalance(userID).then(
     (response) => {
@@ -42,6 +49,18 @@ export const getUserBalance = (userID) => (dispatch) => {
     }
   );
 };
+
+
+
+//   CHANGE THE STATE OF THE USER BALANCE  ON THE MAIN TRANSASTION PAGE
+
+//  MUST TRY TO REFACTOR FOR PENDING  - GIVE A TIME FRAME FOR PENDING 
+
+
+//  GIVE TIME FRAME FOR  PENDING TRANSACTIONS
+
+//  REFACTOR FOR THE ADDITION OF PLAID API AND SOLIDITY FOR BITCOIN ADDITION 
+
 
 export const updateUserBalance =
   (userID, amount, balance, transType) => (dispatch) => {
@@ -81,7 +100,17 @@ export const updateUserBalance =
     );
   };
 
-// Get User's transactions history
+// TRANSACTION HISTORY 
+
+
+//  TRANSACTION FOR PENDING UPDATE SOON 
+
+//  TRANSACTION UPDATE FOR SOLIDITY ADDITION 
+
+
+
+
+
 export const getUserTrans = (userID) => (dispatch) => {
   return UserService.getUserTrans(userID).then(
     (response) => {
@@ -114,7 +143,11 @@ export const getUserTrans = (userID) => (dispatch) => {
   );
 };
 
-// Get all users
+//  PREFER TO GET ALL USERS NAME FOR ADMIN PORTION 
+
+
+//  DANIEL GO BACK TO REVATURE PROJECT 1 FOR THE JAVA VERSION OF THIS FOR THE DATABASE FUNCTION 
+
 export const getAllUsers = (userID) => (dispatch) => {
   return UserService.getAllUsers(userID).then(
     (response) => {

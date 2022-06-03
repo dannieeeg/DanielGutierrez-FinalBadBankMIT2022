@@ -32,7 +32,7 @@ function Withdraw(props) {
             error.message ||
             error.toString();
           console.log("error: " + resMessage);
-          //setStatus(resMessage);
+     
           if (error.response && error.response.status === 401) {
             EventBus.dispatch("logout");
           }
@@ -60,16 +60,16 @@ function Withdraw(props) {
       return setValidTransaction(false);
     }
 
-    //setStatus("");
+
     setValidTransaction(true);
     setAmount(Number(amt));
   };
 
   useEffect(() => {
-    //(`Called useEffect Withdraw`);
+ 
     let isMounted = true;
     if (status !== "") {
-      //console.log(`Called useEffect`);
+     
       setTimeout(() => {
         if (isMounted) setStatus("");
       }, 3000);
