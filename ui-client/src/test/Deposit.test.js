@@ -13,12 +13,11 @@ test("test Deposit amount", () => {
     );
   
     
-    // after rendering our component
     getByText("Balance:");
     const input = getByLabelText("Deposit Amount:");
     fireEvent.change(input, { target: { value: 100 } });
     fireEvent.click(getByText("Submit Deposit"));
   
-    // confirm data
-    getByText("$200.00");
+   
+    getByText("$11000.00");
   });

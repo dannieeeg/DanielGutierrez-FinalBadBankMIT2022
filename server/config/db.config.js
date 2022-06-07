@@ -3,3 +3,7 @@ module.exports = {
   PORT: 27017,
   DB: "badbankDB",
 };
+
+
+
+//  local host for db 

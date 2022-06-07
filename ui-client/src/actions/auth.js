@@ -14,7 +14,12 @@ import AuthService from "../services/auth.service";
 //  AUTHENTICATION SERVICE FOR THE REGISTER PAGE AND MAKE SURE TO RELAY THE MESSAGE AND PAYLOAD OVER 
 
 
-//  REGISTER SUCCESS  OR FAIL 
+//  REGISTER SUCCESS  OR FAIL  
+
+
+//  Refactor for dispath arrow functions daniel 
+
+//  think python django backend 
 export const register = (username, email, password) => (dispatch) => {
   return AuthService.register(username, email, password).then(
     (response) => {

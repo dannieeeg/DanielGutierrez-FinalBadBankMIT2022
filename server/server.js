@@ -23,9 +23,14 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("../server/model");
 const Role = db.role;
+  // ${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB} replace with your cluster or keep the same for local host capabilities
 
+  // watch the placement 
+  //  mongodb documentation 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(`mongodb+srv://dannieeeg:Mit123Coding@mycapstoneproject.qjzqp.mongodb.net/?retryWrites=true&w=majority
+  
+  `, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

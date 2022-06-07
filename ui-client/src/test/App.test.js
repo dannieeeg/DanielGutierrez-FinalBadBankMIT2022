@@ -17,7 +17,7 @@ test("test the screen has all the menu items", () => {
 
 test("test the screen has a welcome message", () => {
   const { getByText } = render(<App />);
-  getByText("Welcome to BadBank");
+  getByText("Welcome to Bank Safe with D");
 });
 
 

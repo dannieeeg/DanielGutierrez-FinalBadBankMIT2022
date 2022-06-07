@@ -1,6 +1,8 @@
 import "./css/styles.css";
 import "./css/bootstrap.css";
+// components import daniel
 
+//  insert holygrail aspects for frontend design work
 import React, { useEffect } from "react";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./components/Home";
@@ -11,13 +13,13 @@ import Withdraw from "./components/accountBalance/Withdraw";
 import AllData from "./components/allData/AllData";
 import Footer from "./components/Footer";
 import Welcome from "./components/account/Welcome";
-
+// import functions 
 import { Router, Route, Switch } from "react-router-dom";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
 import { useDispatch } from "react-redux";
 import { logout } from "./actions/auth";
-
+// import ath 
 import AuthVerify from "./common/AuthVerify";
 
 function App() {

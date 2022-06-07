@@ -4,6 +4,16 @@ import {
   GET_TRANSACTIONS_SUCCESS,
 } from "../actions/type";
 
+
+//  MAKE SURE TO COME BACK AND CLEAN UP THE PAYLOADS DANIEL
+
+
+
+//  SET THE USER INITIAL STATE 
+
+
+
+//  web dev simplified  learn useReducer in 20 minute and corresponding white paper daniel revert back 
 const user = JSON.parse(localStorage.getItem("user"));
 const initialState = user
   ? { isLoggedIn: true, user }
