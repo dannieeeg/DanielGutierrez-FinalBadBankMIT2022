@@ -51,6 +51,16 @@ app.get("/", (req, res) => {
 require("../server/routes/auth.routes")(app);
 require("../server/routes/user.routes")(app);
 
+// 
+app.use(express.static(path.join(__dirname, "/ui-client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/ui-client/build', 'index.html'));
+});
+
+
+
+
 // set port, listen for requests
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
