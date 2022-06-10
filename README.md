@@ -2,8 +2,8 @@
 my final capstone bad bank project for the MITXPRO Full Stack Development program
 
 ## DESCRIPTION
-This project has been a long time time coming. It has taken me quite some time to wrap my head around react and javascript in it's entirety but with help from the cohort and batchmates from MIT's program. I have built a program that is a replication of a banking application that allows registration and login and users with accounts to see their transaction types and dates created as well as amounts.
-As part of the back end, the app uses Node.js and MongoDB for storage.
+This project has been a long time time coming. It has taken me quite some time to wrap my head around react and javascript in it's entirety but with help from the cohort and batchmates from MIT's program. I have built a program that is a replication of a banking application that allows registration and login. Users with accounts are able to see their transaction information.
+As part of the back end, the app uses Express and MongoDB for storage.
 
 ## STRETCH GOALS 
 
